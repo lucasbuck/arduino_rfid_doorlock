@@ -1,6 +1,7 @@
 /**
- *  @title:  StrongLink SL018/SL030 RFID reader demo
- *  @author: marc@marcboon.com
+ *  SL018.h: created by marc@marcboon.com
+ *  @title:  StrongLink SL018/SL030 RFID doorlock
+ *  @author: matt@cowbox.net
  *  @see:    http://www.stronglink.cn/english/sl018.htm
  *  @see:    http://www.stronglink.cn/english/sl030.htm
  *
@@ -25,7 +26,6 @@ void setup()
   Wire.begin();
   Serial.begin(9600);
   pinMode(ledPin, OUTPUT);       //The digital pin that drives the relay
-  //pinMode(13, OUTPUT);       //The digital pin 13
 
   // prompt for tag
   Serial.println("Show me your tag");
@@ -48,19 +48,14 @@ void loop()
   
 }
 
-// functions
-
-// digital ping 2 high / low
-//void open(int k){
-  void open(){
+/* functions */
+void open(){
     
   Serial.print("Door Open  Key number:");
-  //Serial.println(k+1, DEC);
+
     
   digitalWrite(ledPin, HIGH);
-  //digitalWrite(13, HIGH);
   delay(3000);              // wait for 3 seconds
   digitalWrite(ledPin, LOW);
-  //digitalWrite(13, LOW);
   delay(2000);              // wait for 2 seconds  
 }
