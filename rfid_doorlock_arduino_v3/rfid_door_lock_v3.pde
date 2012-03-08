@@ -38,9 +38,8 @@ void loop()
   rfid.seekTag();
   // wait until tag detected
   while(!rfid.available());
-  // print tag id
+  // get tag id
   rfidTag = rfid.getTagString();
-  //Serial.println(rfidTag);
 
   for (int i = 0; i < 6; i++){
    Serial.println(myStrings[i]);
@@ -50,16 +49,11 @@ void loop()
    delay(100);
   }
   
-//  if(rfidTag == "9C728BFE")
-//  {
-//    open();
-//  }
-  
 }
 
 // functions
 
-// digital ping 2 high / low
+// digital pin 2 high / low
 //void open(int k){
   void open(){
     
