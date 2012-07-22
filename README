@@ -1,0 +1,51 @@
+Arduino RFID door lock
+===========================
+This is an RFID authentication arduino project to provide power to a solenoid door lock.
+
+* Door locking (default implementation)
+
+[[to-do]] Here it is in action:
+###add video
+
+
+Hardware
+--------
+To make this RFID system, you'll need the following hardware:
+
+* 1 x Arduino Ethernet - ([Coolcomponents](http://www.coolcomponents.co.uk/catalog/arduino-ethernet-with-module-p-760.html) [arduino.cc](http://arduino.cc/en/Main/Buy))
+* 1 x Solenoid door lock ([Solenoid](http://www.tlc-direct.co.uk/Main_Index/Security_Menu_Index/CCTV_New_Index/Door_Entry_Index/Dook_Electric_Locks/index.html)
+* 1 x RFID Reader module - Stronglink SL018 ([Stronglink](http://www.stronglink-rfid.com/en/rfid-modules/sl018.html)
+* Some jumper wires to wire the whole thing together
+* Some bell wire (anywhere on ebay)
+
+
+Electronics
+-----------
+[[to-do]]
+
+
+Software
+--------
+* [Arduino IDE](http://www.arduino.cc/en/Main/Software)
+
+
+Usage
+-----
+**Wire it Up**
+
+[[to-do]] You can use the image `schematic/reader_breadboard.png` to reference the wiring diagram. Basically you just need to wire the pins as follows:
+
+* Arduino pin 8         -> RFID pin SOUT
+* Arduino pin 9         -> RFID pin /ENABLE
+* Arduino pin GND       -> RFID pin GND
+* Arduino pin 5V        -> RFID pin VCC
+
+* Arduino pin GND       -> Servo wire BLACK
+* Arduino pin Vin (9v)  -> Servo wire RED
+* Arduino pin 3         -> Servo wire YELLOW
+
+Fritzing
+--------
+![Frtizing](http://fritzing.org/)
+
+![Schematic](https://github.com/lucasbuck/arduino_rfid_doorlock/blob/master/rfid_doorlock_fritzing.fz)
